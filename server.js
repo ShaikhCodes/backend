@@ -10,11 +10,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-  host: process.env.host,
-  user: process.env.user,
-  password: process.env.password,
-  database: process.env.database,
-  port: process.env.port
+  host: 'database-2.cb88o66ooik1.ap-south-1.rds.amazonaws.com',
+  user: 'admin',
+  password: 'ADMIN123',
+  database: 'todoapp',
+  port: '3306'
 });
 
 db.connect((err) => {
